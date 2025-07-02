@@ -1,0 +1,10 @@
+
+<library path="axial_joint_hw_interface">
+  <class name="rusmed_motors/AxialJointHW"
+         type="rusmed_motors::AxialJointHW"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      TODO: Change this. @author Andres 
+    </description>
+  </class>
+</library>

@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,ros2,ros,c++,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,ros2,ros,c++,python
 
+## Andrés ## 
+/.vscode
+
+
 ### C++ ###
 # Prerequisites
 *.d
