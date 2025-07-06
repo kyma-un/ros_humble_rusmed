@@ -54,8 +54,8 @@ def generate_launch_description():
     robot_controllers = PathJoinSubstitution(
         [
             FindPackageShare("rusmed_motors"),
-            # "config",
-            # "phantom_controllers.yaml",
+            "config",
+            "rusmed_motors_controllers.yaml",
         ]
     )
 
@@ -79,7 +79,7 @@ def generate_launch_description():
     position_controller_node = Node(
         package='controller_manager', 
         executable="spawner", 
-        arguments=["joint_trajectory_controller", "--controller-manager", "/controller_manager"], 
+        arguments=["position_controller", "--controller-manager", "/controller_manager"], 
         parameters=[""]
     )
 
@@ -99,6 +99,6 @@ def generate_launch_description():
         robot_state_pub,
         control_node,
         # control_node,
-        # position_controller_node,
-        # joint_broadcaster_node
+        position_controller_node,
+        joint_broadcaster_node
         ])

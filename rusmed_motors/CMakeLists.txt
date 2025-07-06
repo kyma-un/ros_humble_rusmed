@@ -46,7 +46,15 @@ ament_target_dependencies(axial_joint_hw_interface
   pluginlib
   rclcpp
   rclcpp_lifecycle
+    
 )
+
+target_link_libraries(
+  axial_joint_hw_interface
+  pigpiod_if2
+)
+
+
 
 # target_link_libraries(axial_joint_hw_interface PUBLIC
 #   hardware_interface
@@ -69,7 +77,7 @@ install(
 
 install(DIRECTORY
   launch
-  # config
+  config
   hardware
   description
   DESTINATION share/${PROJECT_NAME}/

@@ -69,6 +69,10 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr topic_based_joint_states_subscriber_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr topic_based_joint_commands_publisher_;
   rclcpp::Node::SharedPtr node_;
+
+  unsigned pic_handle;  // Handle for i2C
+  int pi; 
+  
   sensor_msgs::msg::JointState latest_joint_state_;
   bool sum_wrapped_joint_states_{ false };
 
